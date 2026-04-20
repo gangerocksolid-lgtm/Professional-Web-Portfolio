@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal portfolio of an aspiring IT professional focused on networking, system support, and web development."
+    />
+    <title>My Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: "0 10px 30px rgba(2, 6, 23, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900 focus:shadow"
+    >
+      Skip to content
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
+        <a href="#" class="font-semibold tracking-tight">
+          <span class="text-slate-900">Gare Barranco Gange Jr.</span>
+        </a>
+
+        <nav aria-label="Primary" class="hidden gap-6 text-sm text-slate-700 sm:flex">
+          <a class="hover:text-slate-900" href="#projects">Projects</a>
+          <a class="hover:text-slate-900" href="#resume">Resume</a>
+          <a class="hover:text-slate-900" href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 sm:hidden">
+          <a class="text-sm text-slate-700 hover:text-slate-900" href="#projects">Projects</a>
+          <a class="text-sm text-slate-700 hover:text-slate-900" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="mx-auto w-full max-w-5xl px-4">
+      <section class="py-14 sm:py-20">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p class="text-sm font-medium text-slate-600">Hello, I’m</p>
+            <h1 class="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Gare Barranco Gange Jr.
+            </h1>
+
+            <p class="mt-4 max-w-prose text-slate-700">
+              I am an aspiring IT professional focused on networking, system support, and web
+              development. I build practical systems that solve real-world business problems.
+            </p>
+
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#projects"
+                id="viewWorkBtn"
+                class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              >
+                View My Work
+              </a>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Focus areas</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                >
+                  IT Support
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                >
+                  Networking
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                >
+                  Web Development
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-semibold text-slate-900">Highlights</p>
+              <span class="text-xs text-slate-500">Student Portfolio</span>
+            </div>
+            <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+              <svg
+                viewBox="0 0 800 420"
+                class="h-auto w-full"
+                role="img"
+                aria-label="Abstract placeholder image"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0f172a" stop-opacity="0.9" />
+                    <stop offset="1" stop-color="#334155" stop-opacity="0.8" />
+                  </linearGradient>
+                </defs>
+                <rect width="800" height="420" fill="url(#g)" />
+                <circle cx="160" cy="140" r="90" fill="#94a3b8" fill-opacity="0.25" />
+                <circle cx="560" cy="240" r="140" fill="#e2e8f0" fill-opacity="0.12" />
+                <rect x="90" y="285" width="620" height="20" rx="10" fill="#e2e8f0" fill-opacity="0.35" />
+                <rect x="90" y="320" width="420" height="16" rx="8" fill="#e2e8f0" fill-opacity="0.25" />
+                <text x="90" y="110" fill="#ffffff" font-family="ui-sans-serif, system-ui" font-size="30" font-weight="700">
+                  Practical, real-world systems
+                </text>
+                <text x="90" y="152" fill="#e2e8f0" font-family="ui-sans-serif, system-ui" font-size="18">
+                  Networking • Support • Web Development
+                </text>
+              </svg>
+            </div>
+
+            <ul class="mt-5 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2">
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
+                Clean UI, mobile-first layout
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
+                Lightweight HTML + Tailwind (CDN)
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
+                Minimal JavaScript (no frameworks)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="scroll-mt-20 py-14">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Projects</h2>
+            <p class="mt-2 max-w-prose text-slate-700">
+              A few school and personal builds focused on solving real business needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
+              <div class="flex h-full w-full items-center justify-center">
+                <span class="text-sm font-semibold text-slate-600">POS System</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="text-lg font-semibold text-slate-900">POS System</h3>
+
+              <div class="mt-3 space-y-2 text-sm text-slate-700">
+                <p><span class="font-semibold text-slate-900">Problem:</span> Small businesses need a way to manage sales and print receipts</p>
+                <p><span class="font-semibold text-slate-900">Solution:</span> Built a POS system that records transactions and connects to a thermal printer</p>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Local Storage</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Receipt Printing</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex gap-3">
+                <a
+                  href="#"
+                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  View Project
+                </a>
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  GitHub
+                </a>
+              </div> 
+            </div>
+          </article>
+
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
+              <div class="flex h-full w-full items-center justify-center">
+                <span class="text-sm font-semibold text-slate-600">Recruitment Website</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="text-lg font-semibold text-slate-900">
+                Recruitment Agency Website (Lizsil International Manpower Agency)
+              </h3>
+
+              <div class="mt-3 space-y-2 text-sm text-slate-700">
+                <p><span class="font-semibold text-slate-900">Problem:</span> Job seekers need a trusted platform</p>
+                <p><span class="font-semibold text-slate-900">Solution:</span> Developed a website to display job listings and agency info</p>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Tailwind CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Responsive UI</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Forms</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex gap-3">
+                <a
+                  href="#"
+                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  View Project
+                </a>
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
+              <div class="flex h-full w-full items-center justify-center">
+                <span class="text-sm font-semibold text-slate-600">Thesis System</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="text-lg font-semibold text-slate-900">Rock Solid Manpower Information System</h3>
+
+              <div class="mt-3 space-y-2 text-sm text-slate-700">
+                <p><span class="font-semibold text-slate-900">Problem:</span> Agencies struggle managing applicants manually</p>
+                <p><span class="font-semibold text-slate-900">Solution:</span> Built a system to organize and track applicants</p>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Basic Database</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CRUD</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex gap-3">
+                <a
+                  href="#"
+                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  View Project
+                </a>
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="resume" class="scroll-mt-20 py-14">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Resume</h2>
+          <p class="mt-2 text-slate-700">A quick overview (you can replace placeholders anytime).</p>
+
+          <div class="mt-8 grid gap-8 md:grid-cols-3">
+            <div class="md:col-span-1">
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Skills</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                <li class="rounded-xl bg-slate-50 px-3 py-2">HTML</li>
+                <li class="rounded-xl bg-slate-50 px-3 py-2">CSS</li>
+                <li class="rounded-xl bg-slate-50 px-3 py-2">JavaScript</li>
+                <li class="rounded-xl bg-slate-50 px-3 py-2">Basic database</li>
+                <li class="rounded-xl bg-slate-50 px-3 py-2">Networking</li>
+                <li class="rounded-xl bg-slate-50 px-3 py-2">Hardware troubleshooting</li>
+              </ul>
+            </div>
+
+            <div class="md:col-span-1">
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Education</h3>
+              <div class="mt-3 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
+                <p class="font-semibold text-slate-900">Your School / University</p>
+                <p class="mt-1">Program: BSIT (or your program)</p>
+                <p class="mt-1">Year: 20XX – 20XX</p>
+              </div>
+            </div>
+
+            <div class="md:col-span-1">
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Certification</h3>
+              <div class="mt-3 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
+                <p class="font-semibold text-slate-900">CompTIA A+</p>
+                <p class="mt-1">Status: <span class="font-semibold">In Progress</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="scroll-mt-20 py-14 pb-16">
+        <div class="grid gap-8 md:grid-cols-2">
+          <div>
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Contact</h2>
+            <p class="mt-2 max-w-prose text-slate-700">
+              Want to collaborate or ask a question? Send a message here.
+            </p>
+
+            <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Note</h3>
+              <p class="mt-2 text-sm text-slate-700">This form is protected from spam</p>
+              <p class="mt-2 text-sm text-slate-700">
+                Tip: Replace the buttons and links in Projects with your real URLs.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <form id="contactForm" class="space-y-4" novalidate>
+              <div>
+                <label for="name" class="block text-sm font-semibold text-slate-900">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-slate-900">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-semibold text-slate-900">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="mt-1 w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  placeholder="Write your message..."
+                ></textarea>
+              </div>
+
+              <button
+                id="submitBtn"
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                Send Message
+              </button>
+
+              <p id="formStatus" class="text-sm text-slate-700" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-slate-600">
+          © 2026 <span class="font-semibold text-slate-900">Gare Barranco Gange Jr.</span>. All rights reserved.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <a
+            class="font-semibold text-slate-700 hover:text-slate-900"
+            href="https://www.linkedin.com/in/gare-jr-gange-16b6b5404"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="font-semibold text-slate-700 hover:text-slate-900"
+            href="https://github.com/gangerocksolid-lgtm/Professional-Web-Portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
