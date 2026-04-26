@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +13,7 @@
 
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
           extend: {
             boxShadow: {
@@ -24,7 +25,9 @@
     </script>
   </head>
 
-  <body class="bg-slate-50 text-slate-900 antialiased">
+  <body
+    class="bg-gradient-to-b from-black via-black to-slate-950 text-slate-100 antialiased selection:bg-white/20 selection:text-white"
+  >
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900 focus:shadow"
@@ -32,266 +35,281 @@
       Skip to content
     </a>
 
-    <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/70 backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/70"
+    >
       <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3">
         <a href="#" class="font-semibold tracking-tight">
-          <span class="text-slate-900">Gare Barranco Gange Jr.</span>
+          <span class="text-slate-900 dark:text-slate-100">Gare Barranco Gange Jr.</span>
         </a>
 
-        <nav aria-label="Primary" class="hidden gap-6 text-sm text-slate-700 sm:flex">
-          <a class="hover:text-slate-900" href="#projects">Projects</a>
-          <a class="hover:text-slate-900" href="#resume">Resume</a>
-          <a class="hover:text-slate-900" href="#contact">Contact</a>
+        <nav aria-label="Primary" class="hidden gap-6 text-sm text-slate-700 dark:text-slate-300 sm:flex">
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href="#projects">Projects</a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href="#resume">Resume</a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href="#contact">Contact</a>
         </nav>
 
         <div class="flex items-center gap-3 sm:hidden">
-          <a class="text-sm text-slate-700 hover:text-slate-900" href="#projects">Projects</a>
-          <a class="text-sm text-slate-700 hover:text-slate-900" href="#contact">Contact</a>
+          <a class="text-sm text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100" href="#projects">Projects</a>
+          <a class="text-sm text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100" href="#contact">Contact</a>
         </div>
       </div>
     </header>
 
     <main id="main" class="mx-auto w-full max-w-5xl px-4">
       <section class="py-14 sm:py-20">
-        <div class="grid items-center gap-10 md:grid-cols-2">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
-            <p class="text-sm font-medium text-slate-600">Hello, I’m</p>
-            <h1 class="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-sm font-medium text-slate-600 dark:text-slate-400">Hello, I’m</p>
+            <h1 class="mt-2 text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
               Gare Barranco Gange Jr.
             </h1>
 
-            <p class="mt-4 max-w-prose text-slate-700">
-              I am an aspiring IT professional focused on networking, system support, and web
-              development. I build practical systems that solve real-world business problems.
-            </p>
+            <div class="mt-4 max-w-prose space-y-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
+              <p>
+                I am an aspiring IT professional specializing in networking, system support, and web
+                development. I build practical, real-world solutions such as POS systems, recruitment
+                websites, and applicant tracking systems that improve business operations and streamline
+                workflows.
+              </p>
+              <p>
+                I have hands-on experience in PC hardware troubleshooting, LAN/Wi-Fi setup, and system
+                maintenance, with a focus on delivering efficient and user-friendly solutions. I am also
+                skilled in diagnosing technical issues, configuring network devices, and ensuring stable
+                and secure system performance.
+              </p>
+              <p>
+                I have worked with technologies such as HTML, CSS, JavaScript, and basic backend
+                integration, along with networking tools like Cisco Packet Tracer for subnetting,
+                routing, and ACL configuration. My experience includes building responsive websites,
+                managing small-scale systems, and documenting processes to improve usability and
+                efficiency.
+              </p>
+              <p>
+                I am continuously learning and improving my skills in networking, system administration,
+                and cybersecurity, with the goal of becoming a well-rounded IT professional capable of
+                handling both infrastructure and development tasks.
+              </p>
+            </div>
 
             <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#projects"
                 id="viewWorkBtn"
-                class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 View My Work
               </a>
 
               <a
                 href="#contact"
-                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
               >
                 Contact Me
               </a>
             </div>
 
             <div class="mt-8">
-              <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Focus areas</p>
+              <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Focus areas</p>
               <div class="mt-3 flex flex-wrap gap-2">
                 <span
-                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
                 >
                   IT Support
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
                 >
                   Networking
                 </span>
                 <span
-                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900"
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
                 >
                   Web Development
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
+                >
+                  Hardware Troubleshooting
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
+                >
+                  System Administration
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
+                >
+                  PC Building &amp; Maintenance
+                </span>
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
+                >
+                  Basic Cybersecurity
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-            <div class="flex items-center justify-between">
-              <p class="text-sm font-semibold text-slate-900">Highlights</p>
-              <span class="text-xs text-slate-500">Student Portfolio</span>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900 md:sticky md:top-24">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
+              <img
+                src="assets/profile.png"
+                alt="Portrait photo"
+                class="h-auto w-full object-cover"
+                loading="lazy"
+              />
             </div>
-            <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-              <svg
-                viewBox="0 0 800 420"
-                class="h-auto w-full"
-                role="img"
-                aria-label="Abstract placeholder image"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#0f172a" stop-opacity="0.9" />
-                    <stop offset="1" stop-color="#334155" stop-opacity="0.8" />
-                  </linearGradient>
-                </defs>
-                <rect width="800" height="420" fill="url(#g)" />
-                <circle cx="160" cy="140" r="90" fill="#94a3b8" fill-opacity="0.25" />
-                <circle cx="560" cy="240" r="140" fill="#e2e8f0" fill-opacity="0.12" />
-                <rect x="90" y="285" width="620" height="20" rx="10" fill="#e2e8f0" fill-opacity="0.35" />
-                <rect x="90" y="320" width="420" height="16" rx="8" fill="#e2e8f0" fill-opacity="0.25" />
-                <text x="90" y="110" fill="#ffffff" font-family="ui-sans-serif, system-ui" font-size="30" font-weight="700">
-                  Practical, real-world systems
-                </text>
-                <text x="90" y="152" fill="#e2e8f0" font-family="ui-sans-serif, system-ui" font-size="18">
-                  Networking • Support • Web Development
-                </text>
-              </svg>
-            </div>
-
-            <ul class="mt-5 space-y-2 text-sm text-slate-700">
-              <li class="flex gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
-                Clean UI, mobile-first layout
-              </li>
-              <li class="flex gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
-                Lightweight HTML + Tailwind (CDN)
-              </li>
-              <li class="flex gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-slate-900"></span>
-                Minimal JavaScript (no frameworks)
-              </li>
-            </ul>
+            <p class="mt-4 text-sm font-semibold text-slate-900 dark:text-slate-100">Gare Barranco Gange Jr.</p>
+            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">BSIT • IT Support • Networking • Web Development</p>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="scroll-mt-20 py-14">
+      <section id="projects" class="scroll-mt-20 border-t border-white/5 py-14">
         <div class="flex items-end justify-between gap-6">
           <div>
-            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Projects</h2>
-            <p class="mt-2 max-w-prose text-slate-700">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Projects</h2>
+            <p class="mt-2 max-w-prose text-slate-700 dark:text-slate-300">
               A few school and personal builds focused on solving real business needs.
             </p>
           </div>
         </div>
 
         <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
-            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
-              <div class="flex h-full w-full items-center justify-center">
-                <span class="text-sm font-semibold text-slate-600">POS System</span>
-              </div>
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow dark:border-slate-800 dark:bg-slate-900">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <a href="#" class="block h-full w-full" data-not-deployed="POS System">
+                <img
+                  src="assets/pos-system.png"
+                  alt="POS System preview"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </a>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="text-lg font-semibold text-slate-900">POS System</h3>
+              <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">POS System</h3>
 
-              <div class="mt-3 space-y-2 text-sm text-slate-700">
+              <div class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
                 <p><span class="font-semibold text-slate-900">Problem:</span> Small businesses need a way to manage sales and print receipts</p>
                 <p><span class="font-semibold text-slate-900">Solution:</span> Built a POS system that records transactions and connects to a thermal printer</p>
               </div>
 
               <div class="mt-4">
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Tech Stack</p>
                 <div class="mt-2 flex flex-wrap gap-2">
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CSS</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Local Storage</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Receipt Printing</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Local Storage</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Receipt Printing</span>
                 </div>
               </div>
 
-              <div class="mt-5 flex gap-3">
+              <div class="mt-5 flex">
                 <a
                   href="#"
-                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                  data-not-deployed="POS System"
+                  class="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
                 >
                   View Project
-                </a>
-                <a
-                  href="#"
-                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
-                >
-                  GitHub
                 </a>
               </div> 
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
-            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
-              <div class="flex h-full w-full items-center justify-center">
-                <span class="text-sm font-semibold text-slate-600">Recruitment Website</span>
-              </div>
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow dark:border-slate-800 dark:bg-slate-900">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <a href="https://lizsilmanpower.com/" target="_blank" rel="noreferrer" class="block h-full w-full">
+                <img
+                  src="assets/recruitment-website.png"
+                  alt="Recruitment Agency Website preview"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </a>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="text-lg font-semibold text-slate-900">
+              <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
                 Recruitment Agency Website (Lizsil International Manpower Agency)
               </h3>
 
-              <div class="mt-3 space-y-2 text-sm text-slate-700">
-                <p><span class="font-semibold text-slate-900">Problem:</span> Job seekers need a trusted platform</p>
-                <p><span class="font-semibold text-slate-900">Solution:</span> Developed a website to display job listings and agency info</p>
+              <div class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                <p><span class="font-semibold text-slate-900 dark:text-slate-100">Problem:</span> Job seekers need a trusted platform</p>
+                <p><span class="font-semibold text-slate-900 dark:text-slate-100">Solution:</span> Developed a website to display job listings and agency info</p>
               </div>
 
               <div class="mt-4">
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Tech Stack</p>
                 <div class="mt-2 flex flex-wrap gap-2">
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Tailwind CSS</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Responsive UI</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Forms</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Tailwind CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Responsive UI</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Forms</span>
                 </div>
               </div>
 
-              <div class="mt-5 flex gap-3">
+              <div class="mt-5 flex">
                 <a
-                  href="#"
-                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                  href="https://lizsilmanpower.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
                 >
                   View Project
-                </a>
-                <a
-                  href="#"
-                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
-                >
-                  GitHub
                 </a>
               </div>
             </div>
           </article>
 
-          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow">
-            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
-              <div class="flex h-full w-full items-center justify-center">
-                <span class="text-sm font-semibold text-slate-600">Thesis System</span>
-              </div>
+          <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:-translate-y-0.5 hover:shadow dark:border-slate-800 dark:bg-slate-900">
+            <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <a
+                href="https://rock-solid-system.vercel.app/login"
+                target="_blank"
+                rel="noreferrer"
+                class="block h-full w-full"
+              >
+                <img
+                  src="assets/rock-solid-system.png"
+                  alt="Rock Solid Manpower Information System preview"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </a>
             </div>
 
             <div class="flex flex-1 flex-col p-5">
-              <h3 class="text-lg font-semibold text-slate-900">Rock Solid Manpower Information System</h3>
+              <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">Rock Solid Manpower Information System</h3>
 
-              <div class="mt-3 space-y-2 text-sm text-slate-700">
-                <p><span class="font-semibold text-slate-900">Problem:</span> Agencies struggle managing applicants manually</p>
-                <p><span class="font-semibold text-slate-900">Solution:</span> Built a system to organize and track applicants</p>
+              <div class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                <p><span class="font-semibold text-slate-900 dark:text-slate-100">Problem:</span> Agencies struggle managing applicants manually</p>
+                <p><span class="font-semibold text-slate-900 dark:text-slate-100">Solution:</span> Built a system to organize and track applicants</p>
               </div>
 
               <div class="mt-4">
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600">Tech Stack</p>
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Tech Stack</p>
                 <div class="mt-2 flex flex-wrap gap-2">
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">HTML</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CSS</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">JavaScript</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">Basic Database</span>
-                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">CRUD</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">HTML</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">CSS</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">JavaScript</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Basic Database</span>
+                  <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">CRUD</span>
                 </div>
               </div>
 
-              <div class="mt-5 flex gap-3">
+              <div class="mt-5 flex">
                 <a
-                  href="#"
-                  class="inline-flex flex-1 items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                  href="https://rock-solid-system.vercel.app/login"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
                 >
                   View Project
-                </a>
-                <a
-                  href="#"
-                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
-                >
-                  GitHub
                 </a>
               </div>
             </div>
@@ -299,38 +317,76 @@
         </div>
       </section>
 
-      <section id="resume" class="scroll-mt-20 py-14">
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
-          <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Resume</h2>
-          <p class="mt-2 text-slate-700">A quick overview (you can replace placeholders anytime).</p>
+      <section id="resume" class="scroll-mt-20 border-t border-white/5 py-14">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Resume</h2>
 
-          <div class="mt-8 grid gap-8 md:grid-cols-3">
+          <div class="mt-8 grid gap-8 md:grid-cols-2">
             <div class="md:col-span-1">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Skills</h3>
-              <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                <li class="rounded-xl bg-slate-50 px-3 py-2">HTML</li>
-                <li class="rounded-xl bg-slate-50 px-3 py-2">CSS</li>
-                <li class="rounded-xl bg-slate-50 px-3 py-2">JavaScript</li>
-                <li class="rounded-xl bg-slate-50 px-3 py-2">Basic database</li>
-                <li class="rounded-xl bg-slate-50 px-3 py-2">Networking</li>
-                <li class="rounded-xl bg-slate-50 px-3 py-2">Hardware troubleshooting</li>
-              </ul>
-            </div>
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Skills</h3>
+              <div class="mt-3 space-y-5">
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Languages</p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Python</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Java</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">C#</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">PHP</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">SQL</span>
+                  </div>
+                </div>
 
-            <div class="md:col-span-1">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Education</h3>
-              <div class="mt-3 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
-                <p class="font-semibold text-slate-900">Your School / University</p>
-                <p class="mt-1">Program: BSIT (or your program)</p>
-                <p class="mt-1">Year: 20XX – 20XX</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Web &amp; Database</p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">HTML</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">CSS</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">JavaScript</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Basic database</span>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">IT Support</p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">IT support &amp; desktop support</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Windows installation &amp; troubleshooting</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Documentation &amp; user support</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Networking</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Basic network setup (LAN / Wi‑Fi)</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">Hardware troubleshooting</span>
+                    <span class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">PC assembly &amp; maintenance</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="md:col-span-1">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Certification</h3>
-              <div class="mt-3 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
-                <p class="font-semibold text-slate-900">CompTIA A+</p>
-                <p class="mt-1">Status: <span class="font-semibold">In Progress</span></p>
+              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600 dark:text-slate-400">Education</h3>
+              <div class="mt-3 space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+                  <div class="flex items-start justify-between gap-4">
+                    <p class="font-semibold text-slate-900 dark:text-slate-100">Cabatuan National Comprehensive High School</p>
+                    <span class="shrink-0 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">2015 – 2019</span>
+                  </div>
+                  <p class="mt-2">Junior High: ICT</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+                  <div class="flex items-start justify-between gap-4">
+                    <p class="font-semibold text-slate-900 dark:text-slate-100">Cabatuan National Comprehensive High School</p>
+                    <span class="shrink-0 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">2019 – 2021</span>
+                  </div>
+                  <p class="mt-2">Senior High: TVL – Programming</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+                  <div class="flex items-start justify-between gap-4">
+                    <p class="font-semibold text-slate-900 dark:text-slate-100">Central Philippine University</p>
+                    <span class="shrink-0 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">2022 – 2027</span>
+                  </div>
+                  <p class="mt-2">College: BSIT</p>
+                </div>
               </div>
             </div>
           </div>
@@ -338,58 +394,69 @@
       </section>
 
       <section id="contact" class="scroll-mt-20 py-14 pb-16">
-        <div class="grid gap-8 md:grid-cols-2">
+        <div class="grid gap-8 md:grid-cols-2 md:items-start">
           <div>
-            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Contact</h2>
-            <p class="mt-2 max-w-prose text-slate-700">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Contact</h2>
+            <p class="mt-2 max-w-prose text-slate-700 dark:text-slate-300">
               Want to collaborate or ask a question? Send a message here.
             </p>
 
-            <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-              <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-600">Note</h3>
-              <p class="mt-2 text-sm text-slate-700">This form is protected from spam</p>
-              <p class="mt-2 text-sm text-slate-700">
-                Tip: Replace the buttons and links in Projects with your real URLs.
-              </p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a
+                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
+                href="https://www.linkedin.com/in/gare-jr-gange-16b6b5404"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 dark:focus:ring-white/15"
+                href="https://github.com/gangerocksolid-lgtm/Professional-Web-Portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
             </div>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900">
             <form id="contactForm" class="space-y-4" novalidate>
               <div>
-                <label for="name" class="block text-sm font-semibold text-slate-900">Name</label>
+                <label for="name" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Name</label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   autocomplete="name"
                   required
-                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-semibold text-slate-900">Email</label>
+                <label for="email" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Email</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   autocomplete="email"
                   required
-                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
                   placeholder="you@example.com"
                 />
               </div>
 
               <div>
-                <label for="message" class="block text-sm font-semibold text-slate-900">Message</label>
+                <label for="message" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   required
-                  class="mt-1 w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                  class="mt-1 w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
                   placeholder="Write your message..."
                 ></textarea>
               </div>
@@ -397,27 +464,23 @@
               <button
                 id="submitBtn"
                 type="submit"
-                class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 disabled:cursor-not-allowed disabled:opacity-70"
+                class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/30 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 Send Message
               </button>
 
-              <p id="formStatus" class="text-sm text-slate-700" aria-live="polite"></p>
+              <p id="formStatus" class="text-sm text-slate-700 dark:text-slate-300" aria-live="polite"></p>
             </form>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-slate-200 bg-white">
+    <footer class="border-t border-white/5 bg-transparent">
       <div class="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-sm text-slate-600">
-          © 2026 <span class="font-semibold text-slate-900">Gare Barranco Gange Jr.</span>. All rights reserved.
-        </p>
-
-        <div class="flex gap-4 text-sm">
+        <div class="flex gap-6 text-base">
           <a
-            class="font-semibold text-slate-700 hover:text-slate-900"
+            class="font-semibold text-slate-300 hover:text-white"
             href="https://www.linkedin.com/in/gare-jr-gange-16b6b5404"
             target="_blank"
             rel="noreferrer"
@@ -425,7 +488,7 @@
             LinkedIn
           </a>
           <a
-            class="font-semibold text-slate-700 hover:text-slate-900"
+            class="font-semibold text-slate-300 hover:text-white"
             href="https://github.com/gangerocksolid-lgtm/Professional-Web-Portfolio"
             target="_blank"
             rel="noreferrer"
@@ -436,5 +499,81 @@
       </div>
     </footer>
 
+    <script>
+      (() => {
+        const toast = (() => {
+          let el = null;
+          return (message) => {
+            if (!el) {
+              el = document.createElement("div");
+              el.className =
+                "fixed left-1/2 top-6 z-50 hidden -translate-x-1/2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-soft dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100";
+              document.body.appendChild(el);
+            }
+            el.textContent = message;
+            el.classList.remove("hidden");
+            clearTimeout(el.__t);
+            el.__t = setTimeout(() => el.classList.add("hidden"), 2400);
+          };
+        })();
+
+        document.querySelectorAll("[data-not-deployed]").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = link.getAttribute("data-not-deployed") || "This project";
+            toast(`${name} is not deployed yet.`);
+          });
+        });
+
+        const FORM = document.getElementById("contactForm");
+        if (!(FORM instanceof HTMLFormElement)) return;
+
+        const nameEl = document.getElementById("name");
+        const emailEl = document.getElementById("email");
+        const messageEl = document.getElementById("message");
+        const statusEl = document.getElementById("formStatus");
+        const submitBtn = document.getElementById("submitBtn");
+
+        const isInput = (el) => el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement;
+        if (!isInput(nameEl) || !isInput(emailEl) || !isInput(messageEl)) return;
+        if (!(statusEl instanceof HTMLElement)) return;
+
+        const SUPPORT_EMAIL = "your-email@example.com";
+
+        const setStatus = (text, type) => {
+          statusEl.textContent = text;
+          statusEl.className =
+            "text-sm dark:text-slate-300 " +
+            (type === "error" ? "text-red-400" : type === "success" ? "text-emerald-400" : "text-slate-300");
+        };
+
+        const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
+        FORM.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const name = nameEl.value.trim();
+          const email = emailEl.value.trim();
+          const message = messageEl.value.trim();
+
+          if (!name) return setStatus("Please enter your name.", "error");
+          if (!email || !isValidEmail(email)) return setStatus("Please enter a valid email address.", "error");
+          if (!message) return setStatus("Please enter a message.", "error");
+
+          if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = true;
+
+          const subject = `Portfolio message from ${name}`;
+          const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`;
+          const mailto = `mailto:${encodeURIComponent(SUPPORT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          window.location.href = mailto;
+
+          setStatus("Opening your email app…", "success");
+          setTimeout(() => {
+            if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = false;
+          }, 1200);
+        });
+      })();
+    </script>
   </body>
 </html>
