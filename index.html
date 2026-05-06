@@ -421,52 +421,39 @@
             </div>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft dark:border-slate-800 dark:bg-slate-900">
+          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <form id="contactForm" class="space-y-4" novalidate>
               <div>
-                <label for="name" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                  required
-                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
-                  placeholder="Your full name"
-                />
-              </div>
-
-              <div>
-                <label for="email" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Email</label>
+                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300">From</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   autocomplete="email"
                   required
-                  class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
+                  class="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20"
                   placeholder="you@example.com"
                 />
               </div>
 
               <div>
-                <label for="message" class="block text-sm font-semibold text-slate-900 dark:text-slate-100">Message</label>
+                <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  rows="6"
                   required
-                  class="mt-1 w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:ring-white/15"
-                  placeholder="Write your message..."
+                  class="mt-1 w-full resize-none rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20"
+                  placeholder="Write your message here..."
                 ></textarea>
               </div>
 
               <button
                 id="submitBtn"
                 type="submit"
-                class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/30 disabled:cursor-not-allowed disabled:opacity-70"
+                class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:cursor-not-allowed disabled:opacity-70 dark:focus:ring-blue-500/40"
               >
-                Send Message
+                Send
               </button>
 
               <p id="formStatus" class="text-sm text-slate-700 dark:text-slate-300" aria-live="polite"></p>
@@ -528,17 +515,16 @@
         const FORM = document.getElementById("contactForm");
         if (!(FORM instanceof HTMLFormElement)) return;
 
-        const nameEl = document.getElementById("name");
         const emailEl = document.getElementById("email");
         const messageEl = document.getElementById("message");
         const statusEl = document.getElementById("formStatus");
         const submitBtn = document.getElementById("submitBtn");
 
         const isInput = (el) => el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement;
-        if (!isInput(nameEl) || !isInput(emailEl) || !isInput(messageEl)) return;
+        if (!isInput(emailEl) || !isInput(messageEl)) return;
         if (!(statusEl instanceof HTMLElement)) return;
 
-        const SUPPORT_EMAIL = "your-email@example.com";
+        const SUPPORT_EMAIL = "gange.rocksolid@gmail.com";
 
         const setStatus = (text, type) => {
           statusEl.textContent = text;
@@ -552,23 +538,23 @@
         FORM.addEventListener("submit", (e) => {
           e.preventDefault();
 
-          const name = nameEl.value.trim();
           const email = emailEl.value.trim();
           const message = messageEl.value.trim();
 
-          if (!name) return setStatus("Please enter your name.", "error");
           if (!email || !isValidEmail(email)) return setStatus("Please enter a valid email address.", "error");
           if (!message) return setStatus("Please enter a message.", "error");
 
           if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = true;
 
-          const subject = `Portfolio message from ${name}`;
-          const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`;
-          const mailto = `mailto:${encodeURIComponent(SUPPORT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          const subject = "Portfolio message";
+          const body = `From: ${email}\n\n${message}\n`;
+          const gmailComposeUrl =
+            `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(SUPPORT_EMAIL)}` +
+            `&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-          window.location.href = mailto;
+          window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
 
-          setStatus("Opening your email app…", "success");
+          setStatus("Opening Gmail compose…", "success");
           setTimeout(() => {
             if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = false;
           }, 1200);
